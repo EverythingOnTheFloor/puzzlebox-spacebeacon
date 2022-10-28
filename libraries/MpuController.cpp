@@ -40,7 +40,7 @@ void setup()
   Wire.endTransmission(true);
 
   Serial.begin(9600);
-  Serial.flush();w
+  Serial.flush();
 }
 void loop()
 {
