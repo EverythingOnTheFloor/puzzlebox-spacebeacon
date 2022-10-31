@@ -17,7 +17,7 @@
 
 //#include <Servo.h>
 //#include "LedController.h"
-//#include "FlopDisplay.h"
+#include "FlopDisplay.h"
 #include "SpaceBeaconController.h"
 //FlopDisplay display = FlopDisplay(2, 3, 4, 5, 6, 7, 8, 9);
 //Servo myservo;
@@ -25,7 +25,6 @@ SpaceBeaconController beacon;
 void setup()
 {
   Serial.begin(115200); 
-  Serial.print("Yeet");
   beacon.initialize();
   
    // myservo.attach(A0);

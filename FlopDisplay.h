@@ -3,12 +3,6 @@
 #ifndef _FLOPDISPLAY_h
 #define _FLOPDISPLAY_h
 
-#if defined(ARDUINO) && ARDUINO >= 100
-	#include "arduino.h"
-#else
-	#include "WProgram.h"
-#endif
-
 class FlopDisplay
 {
 public:
