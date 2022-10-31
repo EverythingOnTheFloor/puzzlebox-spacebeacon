@@ -9,10 +9,6 @@
             "includePath": [
                 "${workspaceRoot}",
                 "${workspaceFolder}/**",
-                "${workspaceRoot}/src/libraries/**",
-                "${workspaceFolder}/src/libraries/**",
-                "${workspaceRoot}/src/libraries/LedController/**",
-                "${workspaceFolder}/src/libraries/LedController/**",
                 "C:/Program Files (x86)/Arduino/hardware/arduino/avr/**",
                 "C:/Program Files (x86)/Arduino/tools/**",
                 "C:/Program Files (x86)/Arduino/hardware/tools/**",
@@ -21,7 +17,11 @@
                 "C:/Program Files (x86)/Arduino/hardware/arduino/avr/variants/standard",
                 "C:/Program Files (x86)/Arduino",
                 "C:/Users/juliu/Documents/Arduino/libraries/Adafruit_NeoPixel",
-                "C:/Users/juliu/Documents/Arduino/libraries/"
+                "C:/Users/juliu/Documents/Arduino/libraries/",
+                "C:/Program Files (x86)/Arduino/libraries/AceButton/src/**",
+                "C:/Program Files (x86)/Arduino/libraries/AceButton/src/ace_button/**",
+                "C:/Users/juliu/Documents/Arduino/libraries/MPU6050/src/**"
+
             ],
             "forcedInclude": [
                 "C:\\\\Program Files (x86)\\\\Arduino\\\\hardware\\\\arduino\\\\avr\\\\cores\\\\arduino\\\\Arduino.h"

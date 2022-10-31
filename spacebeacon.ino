@@ -15,19 +15,19 @@
 
 // The setup() function runs once each time the micro-controller starts
 
-#include <Adafruit_NeoPixel.h>
 //#include <Servo.h>
-#include "LedController.h"
+//#include "LedController.h"
 //#include "FlopDisplay.h"
+#include "SpaceBeaconController.h"
 //FlopDisplay display = FlopDisplay(2, 3, 4, 5, 6, 7, 8, 9);
-LedController led;
-int i = 0;
-bool up = false;
 //Servo myservo;
+SpaceBeaconController beacon;
 void setup()
 {
   Serial.begin(115200); 
-  led.initialize();
+  Serial.print("Yeet");
+  beacon.initialize();
+  
    // myservo.attach(A0);
     //myservo.write(50);//160 and 50
    // display.drawCustom(false, false, false, false, false, false, true);
@@ -35,15 +35,6 @@ void setup()
 
 void loop()
 {
-    if(i >= 255 ||i <= 0){
-          up = !up;
-      }
-
-  if(up)
-    i++;
-  else
-   i--;
-
-  led.setRed(i);
-  delay(10);
+  beacon.update();
+  delay(500);
 }
