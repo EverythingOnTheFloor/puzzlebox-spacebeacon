@@ -12,6 +12,8 @@ class SpaceBeaconController
     SpaceBeaconController();
     void initialize();
     void update();
+    void openDoor(String door);
+    void closeDoor(String door);
   private:
   LedController _ledController;
   Servo _cardDoor;
