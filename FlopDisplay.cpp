@@ -36,8 +36,19 @@ FlopDisplay::FlopDisplay(int pin_a, int pin_b, int pin_c, int pin_d, int pin_e, 
 	this->pin_dp = pin_dp;
 }
 
+FlopDisplay::FlopDisplay(){}
+void FlopDisplay::setEnabled(bool state){
+	if(state == false){
+		drawCustom(false,false,false,false,false,false,false);
+		drawDot(false);
+	}
+	isEnabled = state;
+}
+
 void FlopDisplay::drawDot(bool isOn)
 {
+	if(!isEnabled) return;
+
 	if (isOn) 
 	{
 		digitalWrite(pin_dp, HIGH);
@@ -51,6 +62,8 @@ void FlopDisplay::drawDot(bool isOn)
 
 void FlopDisplay::drawCustom(int status_pin_a, int status_pin_b, int status_pin_c, int status_pin_d, int status_pin_e, int status_pin_f, int status_pin_g)
 {
+	if(!isEnabled) return;
+
 	digitalWrite(pin_a, status_pin_a);
 	digitalWrite(pin_b, status_pin_b);
 	digitalWrite(pin_c, status_pin_c);
@@ -62,6 +75,8 @@ void FlopDisplay::drawCustom(int status_pin_a, int status_pin_b, int status_pin_
 
 void FlopDisplay::drawNumber(int number)
 {
+	if(!isEnabled) return;
+
 	if (number < 0 || number > 9) return;
 
 	digitalWrite(pin_a, LOW);

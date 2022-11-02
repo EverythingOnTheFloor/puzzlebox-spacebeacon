@@ -25,6 +25,7 @@ SpaceBeaconController beacon;
 void setup()
 {
   Serial.begin(115200); 
+  Serial.println("yeet111");
   beacon.initialize();
   
    // myservo.attach(A0);
@@ -34,3 +35,5 @@ void setup()
 
 void loop()
 {  
+  beacon.update();
+}
