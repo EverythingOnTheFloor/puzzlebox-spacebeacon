@@ -34,14 +34,7 @@ FlopDisplay::FlopDisplay(int pin_a, int pin_b, int pin_c, int pin_d, int pin_e, 
 	this->pin_g = pin_g;
 	pinMode(pin_dp, OUTPUT);
 	this->pin_dp = pin_dp;
-	int lastMillis = 0;
 }
-
-void loadingAnimation(){
-	
-
-}
-
 
 void FlopDisplay::drawDot(bool isOn)
 {
